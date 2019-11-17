@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AprendaInglesFanap</string>
+    <string name="li_o_03_parentes">Lição 03 - Parentes</string>
+    <string name="li_o_01_frutas">Lição 01 - Frutas</string>
+    <string name="li_o_02_animais">Lição 02 - Animais</string>
+    <string name="li_o_04_numeros">Lição 04 - Numeros</string>
 </resources>

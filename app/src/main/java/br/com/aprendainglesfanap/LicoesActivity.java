@@ -24,6 +24,9 @@ public class LicoesActivity extends AppCompatActivity implements View.OnClickLis
 
         Button parente = (Button) findViewById(R.id.btn_parente);
         parente.setOnClickListener(this);
+
+        Button numero = (Button) findViewById(R.id.btn_numero);
+        numero.setOnClickListener(this);
     }
 
     public void onClick(View view) {
@@ -31,8 +34,13 @@ public class LicoesActivity extends AppCompatActivity implements View.OnClickLis
         switch (view.getId()) {
 
             case R.id.btn_fruta:
-                Intent intent = new Intent(this, LicaoFrutasActivity.class);
-                startActivity(intent);
+                Intent intentFruta = new Intent(this, LicaoFrutasActivity.class);
+                startActivity(intentFruta);
+                break;
+
+            case R.id.btn_numero:
+                Intent intentNumero = new Intent(this, LicaoNumerosActivity.class);
+                startActivity(intentNumero);
                 break;
         }
     }
