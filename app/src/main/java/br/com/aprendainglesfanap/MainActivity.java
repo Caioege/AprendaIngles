@@ -12,8 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    String nome_crianca, email_resp;
-    EditText crianca, email;
+    EditText nome_crianca, email_resp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +21,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         //TRAS OS DADOS DA TELA DE LOGIN
-        crianca = (EditText) findViewById(R.id.txt_nome);
-        //nome_crianca = crianca.toString();
-        email = (EditText) findViewById(R.id.email_resp);
-        //email_resp = email.toString();
+        nome_crianca = (EditText) findViewById(R.id.txt_nome);
+        email_resp = (EditText) findViewById(R.id.email_resp);
 
         //BOTOES DEFINIDOS NO XML
         Button confirma = (Button) findViewById(R.id.confirma);
@@ -41,16 +38,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.confirma:
 
-                //VERIFICA OS VALORES DA TELA DE LOGIN - NAO TA FUNCIONANDO AINDA
-                if(crianca.length() == 0) {
+                //VERIFICA OS VALORES DA TELA DE LOGIN
+                if(nome_crianca.length() == 0) {
                     Toast.makeText(this, "Por favor insira seu nome.", Toast.LENGTH_LONG).show();
                     break;
-                } else if(email.length() == 0) {
+                } else if(email_resp.length() == 0) {
                     Toast.makeText(this, "Por favor insira o e-mail de um dos seus responsáveis.", Toast.LENGTH_LONG).show();
                     break;
                 }else {
-                    String nome = crianca.toString();
-                    Toast.makeText(this, nome, Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "Bons estudos " + nome_crianca.getText() + "!", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(this, LicoesActivity.class);
                     startActivity(intent);
                     break;
