@@ -13,6 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     String nome_crianca, email_resp;
+    EditText crianca, email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +22,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         //TRAS OS DADOS DA TELA DE LOGIN
-        EditText crianca = (EditText) findViewById(R.id.txt_nome);
-        nome_crianca = crianca.toString();
-        EditText email = (EditText) findViewById(R.id.email_resp);
-        email_resp = email.toString();
+        crianca = (EditText) findViewById(R.id.txt_nome);
+        //nome_crianca = crianca.toString();
+        email = (EditText) findViewById(R.id.email_resp);
+        //email_resp = email.toString();
 
         //BOTOES DEFINIDOS NO XML
         Button confirma = (Button) findViewById(R.id.confirma);
@@ -41,17 +42,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.confirma:
 
                 //VERIFICA OS VALORES DA TELA DE LOGIN - NAO TA FUNCIONANDO AINDA
-                if(nome_crianca.isEmpty()) {
+                if(crianca.length() == 0) {
                     Toast.makeText(this, "Por favor insira seu nome.", Toast.LENGTH_LONG).show();
-                } else if(email_resp.isEmpty()) {
-                    Toast.makeText(this, "Por favor insira o e-mail um dos seus responsáveis.", Toast.LENGTH_LONG).show();
+                    break;
+                } else if(email.length() == 0) {
+                    Toast.makeText(this, "Por favor insira o e-mail de um dos seus responsáveis.", Toast.LENGTH_LONG).show();
+                    break;
                 }else {
-                    Toast.makeText(this, "Bons estudos " + nome_crianca + "!", Toast.LENGTH_LONG).show();
+                    String nome = crianca.toString();
+                    Toast.makeText(this, "Bons estudos!", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(this, LicoesActivity.class);
                     startActivity(intent);
                     break;
                 }
-                break;
 
             case R.id.sair:
                 this.finish();
