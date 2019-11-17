@@ -46,7 +46,7 @@
 
     <EditText
         android:id="@+id/txt_nome"
-        android:layout_width="wrap_content"
+        android:layout_width="360dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="center"
@@ -62,7 +62,7 @@
 
     <EditText
         android:id="@+id/email_resp"
-        android:layout_width="wrap_content"
+        android:layout_width="360dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="center"

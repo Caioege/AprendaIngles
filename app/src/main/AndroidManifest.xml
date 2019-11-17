@@ -9,9 +9,10 @@
         android:roundIcon="@drawable/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LicoesActivity"></activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".SplashActivity">
+        <activity android:name=".LicaoFrutasActivity"></activity>
+        <activity android:name=".LicoesActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity" android:screenOrientation="portrait" />
+        <activity android:name=".SplashActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
