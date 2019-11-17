@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     break;
                 }else {
                     String nome = crianca.toString();
-                    Toast.makeText(this, "Bons estudos!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, nome, Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(this, LicoesActivity.class);
                     startActivity(intent);
                     break;
