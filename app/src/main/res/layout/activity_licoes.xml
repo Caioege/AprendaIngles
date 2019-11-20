@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clickable="false"
+    android:background="#CAE1FF"
     tools:context=".LicoesActivity">
 
     <ImageView
@@ -16,7 +17,7 @@
         android:contentDescription="TODO"
         app:layout_constraintBottom_toTopOf="@+id/btn_parente"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/licao_partente" />
 
@@ -30,22 +31,21 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_numero"
-        app:layout_constraintHorizontal_bias="0.575"
+        app:layout_constraintHorizontal_bias="0.656"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/licao_animal"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_marginTop="44dp"
         android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="TODO"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.839"
+        app:layout_constraintHorizontal_bias="0.846"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.079"
-        app:srcCompat="@drawable/licao_animal"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/licao_animal" />
 
     <Button
         android:id="@+id/btn_fruta"
@@ -56,10 +56,10 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/licao_parente"
         app:layout_constraintEnd_toStartOf="@+id/btn_animal"
-        app:layout_constraintHorizontal_bias="0.594"
+        app:layout_constraintHorizontal_bias="0.591"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/licao_fruta"
-        app:layout_constraintVertical_bias="0.278" />
+        app:layout_constraintVertical_bias="0.4" />
 
     <ImageView
         android:id="@+id/licao_fruta"
@@ -78,15 +78,16 @@
         android:id="@+id/btn_animal"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/button"
         android:text="@string/li_o_02_animais"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/licao_numero"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.839"
+        app:layout_constraintHorizontal_bias="0.846"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/licao_animal"
-        app:layout_constraintVertical_bias="0.264" />
+        app:layout_constraintVertical_bias="0.045" />
 
     <ImageView
         android:id="@+id/licao_numero"
@@ -95,7 +96,7 @@
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_numero"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintHorizontal_bias="0.833"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/licao_numero" />
 
@@ -103,15 +104,13 @@
         android:id="@+id/btn_numero"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
         android:layout_marginBottom="156dp"
         android:background="@drawable/button"
         android:onClick="onClick"
         android:text="@string/li_o_04_numeros"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/licajuo_numero"
-        app:layout_constraintVertical_bias="0.264" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

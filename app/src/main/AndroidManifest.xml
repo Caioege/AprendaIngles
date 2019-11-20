@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".LicaoFrutasActivity"></activity>
         <activity android:name=".LicaoNumerosActivity"></activity>
+        <activity android:name=".QuestionarioNumerosActivity"></activity>
         <activity android:name=".LicoesActivity" android:screenOrientation="portrait"/>
         <activity android:name=".MainActivity" android:screenOrientation="portrait" />
         <activity android:name=".SplashActivity" android:screenOrientation="portrait">
