@@ -38,6 +38,16 @@ public class LicoesActivity extends AppCompatActivity implements View.OnClickLis
                 startActivity(intentFruta);
                 break;
 
+            case R.id.btn_animal:
+                Intent intentAnimal = new Intent(this, LicaoAnimaisActivity.class);
+                startActivity(intentAnimal);
+                break;
+
+            case R.id.btn_parente:
+                Intent intentParente = new Intent(this, LicaoParentesActivity.class);
+                startActivity(intentParente);
+                break;
+
             case R.id.btn_numero:
                 Intent intentNumero = new Intent(this, LicaoNumerosActivity.class);
                 startActivity(intentNumero);

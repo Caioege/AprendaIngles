@@ -9,11 +9,16 @@
         android:roundIcon="@drawable/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LicaoFrutasActivity"></activity>
-        <activity android:name=".LicaoNumerosActivity"></activity>
-        <activity android:name=".QuestionarioNumerosActivity"></activity>
+        <activity android:name=".LicaoFrutasActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".LicaoAnimaisActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".LicaoParentesActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".LicaoNumerosActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".QuestionarioFrutasActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".QuestionarioAnimaisActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".QuestionarioParentesActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".QuestionarioNumerosActivity" android:screenOrientation="portrait"></activity>
         <activity android:name=".LicoesActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".MainActivity" android:screenOrientation="portrait" />
+        <activity android:name=".MainActivity" android:screenOrientation= "portrait" />
         <activity android:name=".SplashActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
