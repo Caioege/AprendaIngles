@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +14,7 @@ public class LicaoNumerosActivity extends AppCompatActivity implements View.OnCl
 
     Button btn_one, btn_two, btn_three, btn_four, btn_five, btn_six, questionario4;
     MediaPlayer mediaPlayer;
+    int countone, counttwo, countthree, countfour, countfive, countsix;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,37 +50,50 @@ public class LicaoNumerosActivity extends AppCompatActivity implements View.OnCl
             case R.id.btn_one:
                 mediaPlayer = MediaPlayer.create(LicaoNumerosActivity.this, R.raw.one);
                 mediaPlayer.start();
+                countone++;
                 break;
 
             case R.id.btn_two:
                 mediaPlayer = MediaPlayer.create(LicaoNumerosActivity.this, R.raw.two);
                 mediaPlayer.start();
+                counttwo++;
                 break;
 
             case R.id.btn_three:
                 mediaPlayer = MediaPlayer.create(LicaoNumerosActivity.this, R.raw.three);
                 mediaPlayer.start();
+                countthree++;
                 break;
 
             case R.id.btn_four:
                 mediaPlayer = MediaPlayer.create(LicaoNumerosActivity.this, R.raw.four);
                 mediaPlayer.start();
+                countfour++;
                 break;
 
             case R.id.btn_five:
                 mediaPlayer = MediaPlayer.create(LicaoNumerosActivity.this, R.raw.five);
                 mediaPlayer.start();
+                countfive++;
                 break;
 
             case R.id.btn_six:
                 mediaPlayer = MediaPlayer.create(LicaoNumerosActivity.this, R.raw.six);
                 mediaPlayer.start();
+                countsix++;
                 break;
 
             case R.id.btn_questionario4:
-                Intent questionario4 = new Intent(this, QuestionarioNumerosActivity.class);
-                startActivity(questionario4);
-                break;
+
+                if(countone>0 && counttwo>0 && countthree>0 && countfour>0 && countfive>0 && countsix>0) {
+                    Intent questionario4 = new Intent(this, QuestionarioNumerosActivity.class);
+                    startActivity(questionario4);
+                    break;
+                } else {
+                    mediaPlayer = MediaPlayer.create(this, R.raw.todossons);
+                    mediaPlayer.start();
+                    Toast.makeText(this, "Escute pelo menos uma vez todos os números antes de tentar responder a Lição 01!", Toast.LENGTH_LONG).show();
+                }
 
         }
     }

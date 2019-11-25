@@ -14,8 +14,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     EditText nome_crianca, email_resp;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +30,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button sair = (Button) findViewById(R.id.sair);
         sair.setOnClickListener(this);
+
+        //Button envia = (Button) findViewById(R.id.envia);
+        //envia.setOnClickListener(this);
     }
 
     public void onClick(View view) {
@@ -57,6 +58,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.sair:
                 this.finish();
                 break;
+
+            case R.id.envia:
+
+                try{
+                    JavaMail envio = new JavaMail();
+                    envio.enviaEmail(email_resp.getText().toString());
+                    Toast.makeText(this, "E-mail enviado com sucesso!", Toast.LENGTH_LONG).show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Toast.makeText(this, "Erro ao enviar e-mail!", Toast.LENGTH_LONG).show();
+                }
+                break;
         }
+
     }
 }
