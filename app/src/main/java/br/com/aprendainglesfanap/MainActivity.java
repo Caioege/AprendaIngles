@@ -4,23 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import java.util.Properties;
-import javax.mail.Address;
-import javax.mail.Authenticator;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-import br.com.aprendainglesfanap.JavaMail;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -43,8 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button sair = (Button) findViewById(R.id.sair);
         sair.setOnClickListener(this);
 
-        Button envia = (Button) findViewById(R.id.envia);
-        envia.setOnClickListener(this);
+        //Button envia = (Button) findViewById(R.id.envia);
+        //envia.setOnClickListener(this);
     }
 
     public void onClick(View view) {
