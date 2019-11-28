@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_login"
+    tools:context=".QuestionarioNumeroActivity">
+
+    <ImageButton
+        android:id="@+id/playbutton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.269"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <TextView
+            android:id="@+id/textView2"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="Clique no botão para reproduzir o áudio, depois clique na imagem que representa o número falado."
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.024" />
+
+    <RadioGroup
+        android:id="@+id/grupo1"
+        android:layout_width="220dp"
+        android:layout_height="215dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.837"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.217">
+
+        <RadioButton
+            android:id="@+id/bt_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/one_small"
+            android:text="ONE"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:textStyle="italic" />
+
+        <RadioButton
+            android:id="@+id/bt_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/three_small"
+            android:text="THREE"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:textStyle="italic" />
+
+        <RadioButton
+            android:id="@+id/bt_five"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/five_small"
+            android:text="FIVE"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:textStyle="italic" />
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/playbutton2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.709"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <RadioGroup
+        android:id="@+id/grupo2"
+        android:layout_width="220dp"
+        android:layout_height="215dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.837"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.751">
+
+        <RadioButton
+            android:id="@+id/bt_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/two_small"
+            android:text="TWO"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:textStyle="italic" />
+
+        <RadioButton
+            android:id="@+id/bt_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/four_small"
+            android:text="FOUR"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:textStyle="italic" />
+
+        <RadioButton
+            android:id="@+id/bt_six"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/six_small"
+            android:text="SIX"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:textStyle="italic" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/finaliza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finalizar Questionário 01"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.944" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

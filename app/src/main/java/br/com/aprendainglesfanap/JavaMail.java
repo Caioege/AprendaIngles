@@ -47,9 +47,9 @@ public class JavaMail {
             if (session != null) {
                 Message message = new MimeMessage(session);
                 message.setFrom(new InternetAddress("projetolinguas.fanap@gmail.com"));
-                message.setSubject("ESCREVA AQUI O ASSUNTO");
+                message.setSubject("Lição Concluída!");
                 message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email_resp));
-                message.setContent("ESCREVA AQUI A MENSAGEM", "text/html; charset=utf-8");
+                message.setContent("Saudações, seu filho acaba de passar por uma Lição. Que orgulho!", "text/html; charset=utf-8");
                 Transport.send(message);
 
                 //Toast.makeText(this, "E-mail enviado!", Toast.LENGTH_LONG).show();

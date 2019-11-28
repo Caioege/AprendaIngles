@@ -3,22 +3,31 @@ package br.com.aprendainglesfanap;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.content.SharedPreferences;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText nome_crianca, email_resp;
+    boolean abriuUmaVez = false;
+
+    public MainActivity() {
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);getSupportActionBar().hide();//FULLSCREEN
         setContentView(R.layout.activity_main);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("user_preferences", MODE_PRIVATE);
 
         //TRAS OS DADOS DA TELA DE LOGIN
         nome_crianca = (EditText) findViewById(R.id.txt_nome);
@@ -43,12 +52,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 //VERIFICA OS VALORES DA TELA DE LOGIN
                 if(nome_crianca.length() == 0) {
+
+                    if(abriuUmaVez) {
+                        Toast.makeText(this, "true", Toast.LENGTH_LONG).show();
+                    }
                     Toast.makeText(this, "Por favor insira seu nome.", Toast.LENGTH_LONG).show();
                     break;
                 } else if(email_resp.length() == 0) {
                     Toast.makeText(this, "Por favor insira o e-mail de um dos seus responsáveis.", Toast.LENGTH_LONG).show();
                     break;
                 }else {
+
                     Toast.makeText(this, "Bons estudos " + nome_crianca.getText() + "!", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(this, LicoesActivity.class);
                     startActivity(intent);
@@ -73,4 +87,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
+
 }
