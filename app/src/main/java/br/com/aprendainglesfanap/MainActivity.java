@@ -1,7 +1,6 @@
 package br.com.aprendainglesfanap;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +8,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.content.SharedPreferences;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -17,8 +17,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);getSupportActionBar().hide();//FULLSCREEN
-        setContentView(R.layout.activity_main);
+        validaLogin();
 
         //TRAS OS DADOS DA TELA DE LOGIN
         nome_crianca = (EditText) findViewById(R.id.txt_nome);
@@ -26,13 +27,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //BOTOES DEFINIDOS NO XML
         Button confirma = (Button) findViewById(R.id.confirma);
+
         confirma.setOnClickListener(this);
 
         Button sair = (Button) findViewById(R.id.sair);
         sair.setOnClickListener(this);
+    }
 
-        //Button envia = (Button) findViewById(R.id.envia);
-        //envia.setOnClickListener(this);
+    //METODO PARA VERIFICAR SE O USUARIO ESTA LOGADO
+    public void validaLogin(){
+        SharedPreferences preferences = getSharedPreferences("user_preferences", MODE_PRIVATE);
+        if(preferences.contains("nome")){
+            Intent intent = new Intent(this, LicoesActivity.class);
+            startActivity(intent);
+        } else {
+            setContentView(R.layout.activity_main);
+        }
+    }
+
+    //METODO PARA SALVAR DADOS CADASTRAIS
+    public void saveData() {
+        SharedPreferences preferences = getSharedPreferences("user_preferences", MODE_PRIVATE);
+        SharedPreferences.Editor ed = preferences.edit();
+        ed.putString("nome", nome_crianca.getText().toString());
+        ed.putString("email", email_resp.getText().toString());
+        ed.apply();
+        //Toast.makeText(getApplicationContext(),"Gravado com sucesso", Toast.LENGTH_SHORT).show();
+    }
+
+    //METODO PARA BUSCAR DADOS CADASTRAIS
+    public void getData() {
+        SharedPreferences preferences = getSharedPreferences("user_preferences", MODE_PRIVATE);
+        if(preferences.contains("nome")){
+            System.out.println(preferences.getString("nome",""));
+            System.out.println(preferences.getString("email",""));
+            //nome_crianca.setText(preferences.getString("nome",""));
+            //email_resp.setText(preferences.getString("email",""));
+        } else {
+            System.out.println("Não Localizado");
+        }
     }
 
     public void onClick(View view) {
@@ -52,6 +85,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(this, "Bons estudos " + nome_crianca.getText() + "!", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(this, LicoesActivity.class);
                     startActivity(intent);
+                    saveData();
+                    getData();
                     break;
                 }
 
@@ -71,6 +106,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
         }
-
     }
 }
