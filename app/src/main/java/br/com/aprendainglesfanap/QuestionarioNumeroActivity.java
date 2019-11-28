@@ -62,16 +62,17 @@ public class QuestionarioNumeroActivity extends AppCompatActivity implements Vie
                 bt_four.setOnClickListener(this);
 
                 if(escutou1 > 0 && escutou2 > 0) {
-                    Toast.makeText(this, "Parabéns, você concluiu a primeira Lição.", Toast.LENGTH_LONG).show();
+
                     Intent finaliza = new Intent(this, LicoesActivity.class);
                     startActivity(finaliza);
-                    Toast.makeText(this, "Parabéns, você concluiu a primeira Lição.", Toast.LENGTH_LONG).show();
+
                     try{
                         JavaMail envio = new JavaMail();
                         envio.enviaEmail("caiohenrick231@gmail.com");
+                        Toast.makeText(this, "E-mail enviado!", Toast.LENGTH_LONG).show();
                     } catch (Exception e) {
                         e.printStackTrace();
-                        Toast.makeText(this, "Erro ao enviar e-mail!", Toast.LENGTH_LONG).show();
+                       Toast.makeText(this, "Erro ao enviar e-mail!", Toast.LENGTH_LONG).show();
                     }
                     break;
                 } else {
