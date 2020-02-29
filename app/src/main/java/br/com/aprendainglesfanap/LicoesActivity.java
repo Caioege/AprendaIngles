@@ -21,15 +21,15 @@ public class LicoesActivity extends AppCompatActivity implements View.OnClickLis
 
         Button fruta = (Button) findViewById(R.id.btn_fruta);
         fruta.setOnClickListener(this);
-        fruta.setEnabled(false);
+        fruta.setEnabled(true);
 
         Button animal = (Button) findViewById(R.id.btn_animal);
         animal.setOnClickListener(this);
-        animal.setEnabled(false);
+        animal.setEnabled(true);
 
         Button parente = (Button) findViewById(R.id.btn_parente);
         parente.setOnClickListener(this);
-        parente.setEnabled(false);
+        parente.setEnabled(true);
 
         Button numero = (Button) findViewById(R.id.btn_numero);
         numero.setOnClickListener(this);

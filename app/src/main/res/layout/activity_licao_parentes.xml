@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CAE1FF"
+    android:background="@drawable/background_login"
     tools:context=".LicaoParentesActivity">
 
     <Button
@@ -18,4 +18,115 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.933" />
 
+    <ImageButton
+        android:id="@+id/img_familia"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginRight="61dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_avo"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.103"
+        app:srcCompat="@drawable/familia" />
+
+    <ImageButton
+        android:id="@+id/img_avo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginRight="41dp"
+        android:layout_marginBottom="60dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/img_avoo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_familia"
+        app:layout_constraintTop_toBottomOf="@+id/textoInformativo"
+        app:srcCompat="@drawable/avo" />
+
+    <ImageButton
+        android:id="@+id/img_avoo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginRight="61dp"
+        android:layout_marginBottom="42dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/img_maeEfilha"
+        app:layout_constraintEnd_toStartOf="@+id/img_paiEfilho"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_avo"
+        app:srcCompat="@drawable/avoo" />
+
+    <ImageButton
+        android:id="@+id/img_paiEfilho"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginRight="41dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/img_avoo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_avoo"
+        app:layout_constraintTop_toTopOf="@+id/img_avoo"
+        app:srcCompat="@drawable/paiefilho" />
+
+    <ImageButton
+        android:id="@+id/img_maeEfilha"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginRight="61dp"
+        android:layout_marginBottom="155dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_irmaos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_avoo"
+        app:srcCompat="@drawable/maeefilha" />
+
+    <ImageButton
+        android:id="@+id/img_irmaos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginRight="41dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/img_maeEfilha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_maeEfilha"
+        app:layout_constraintTop_toTopOf="@+id/img_maeEfilha"
+        app:srcCompat="@drawable/irmaos" />
+
+    <TextView
+        android:id="@+id/textoInformativo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clique na imagem para ouvi-las"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_questionario3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.607"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
