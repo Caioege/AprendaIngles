@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.aprendainglesfanap">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -10,17 +11,38 @@
         android:roundIcon="@drawable/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LicaoFrutasActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name=".LicaoAnimaisActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name=".LicaoParentesActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name=".LicaoNumerosActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name=".QuestionarioFrutasActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name=".QuestionarioAnimaisActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name=".QuestionarioParentesActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name=".QuestionarioNumerosActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name=".LicoesActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".MainActivity" android:screenOrientation= "portrait"/>
-        <activity android:name=".SplashActivity" android:screenOrientation="portrait">
+        <activity android:name=".QuestionarioNumeroActivity2"></activity>
+        <activity android:name=".QuestionarioNumeroActivity" />
+        <activity
+            android:name=".LicaoFrutasActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LicaoAnimaisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LicaoParentesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LicaoNumerosActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QuestionarioFrutasActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QuestionarioAnimaisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QuestionarioParentesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LicoesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

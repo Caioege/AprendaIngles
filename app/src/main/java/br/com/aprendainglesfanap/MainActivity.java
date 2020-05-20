@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //BOTOES DEFINIDOS NO XML
         Button confirma = (Button) findViewById(R.id.confirma);
 
-        confirma.setOnClickListener(this);
+        //confirma.setOnClickListener(this);
 
         Button sair = (Button) findViewById(R.id.sair);
         sair.setOnClickListener(this);

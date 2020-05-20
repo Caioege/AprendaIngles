@@ -86,7 +86,7 @@ public class LicaoNumerosActivity extends AppCompatActivity implements View.OnCl
             case R.id.btn_questionario4:
 
                 if(countone>0 && counttwo>0 && countthree>0 && countfour>0 && countfive>0 && countsix>0) {
-                    Intent questionario4 = new Intent(this, QuestionarioNumerosActivity.class);
+                    Intent questionario4 = new Intent(this, QuestionarioNumeroActivity.class);
                     startActivity(questionario4);
                     break;
                 } else {
